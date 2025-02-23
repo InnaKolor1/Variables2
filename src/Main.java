@@ -4,17 +4,17 @@ public class Main {
         System.out.println(" Задача 1 ");
 
      int theManInTheStadium=15000;
-     System.out.println("Значение переменной theManInTheStadium с типом int равно 15000");
+     System.out.println(" Значение переменной theManInTheStadium с типом int равно 15000 ");
      byte childrenInTheFamily=6;
-     System.out.println("Значение переменной childrenInTheFamily с типом byte равно 6");
+     System.out.println(" Значение переменной childrenInTheFamily с типом byte равно 6 ");
      short revenuePerDay=31500;
-     System.out.println("Значение переменной revenuePerDay с типом short равно 31500");
+     System.out.println(" Значение переменной revenuePerDay с типом short равно 31500 ");
      long populationInRussia=146150000;
-     System.out.println("Значение переменной populationInRussia с типом long равно 146150000");
+     System.out.println(" Значение переменной populationInRussia с типом long равно 146150000 ");
      float tableWeight=3.5f;
-     System.out.println("Значение переменной tableWeihgt с типом float равно 3.5f");
+     System.out.println(" Значение переменной tableWeihgt с типом float равно 3.5f ");
      double dogWeight=26.350;
-     System.out.println("Значение переменной dogWeight с типом double равно 26.350");
+     System.out.println(" Значение переменной dogWeight с типом double равно 26.350 ");
 
 
      System.out.println("Задача 2");
