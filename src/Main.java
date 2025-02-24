@@ -1,3 +1,7 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,34 +26,50 @@ public class Main {
      byte a = 67;
      short b = -159;
      short c = 27897;
-     int d = 569;
+     short d = 569;
      long e = 987678965549L;
-     double f = 2.786;
+     float f = 2.786f;
      double g = 27.12;
 
      System.out.println("Задача 3");
 
      byte classA = 23;
      byte classB = 27;
-     byte classC = 30;
-     short sheetsOfPaper = 480;
-     System.out.println(" На каждого ученика рассчитано "+sheetsOfPaper/(classA+classB+classC)+" листов бумаги ");
+     short classC = 30;
+     int totalNumbers=classA+classB+classC;
+     int sheetsOfPaper=480;
+     int total=sheetsOfPaper/totalNumbers;
+     System.out.println(480/(23+27+30));
+     System.out.println(" На каждого ученика рассчитано 6 листов бумаги ");
 
 
      System.out.println("Задача 4");
 
-     byte bottlesIn2Minutes=16;
-     System.out.println(" За 2 минуты машина произвела 16 штук бутылок ");
-     byte bottlesIn1Minutes=16/2;
-     System.out.println(" За 1 минут машина произвела "+ bottlesIn1Minutes+" штук бутылок ");
-     short bottlesIn20Minutes=20*8;
-     System.out.println(" За 20 минут машина произвела "+ bottlesIn20Minutes+" штук бутылок ");
-     short bottlesPerDay=1440*8;
-     System.out.println(" За сутки машина произвела "+bottlesPerDay+ " штук бутылок ");
-     int bottlesIn3Days=4320*8;
-     System.out.println(" За сутки машина произвела "+bottlesIn3Days+" штук бутылок ");
-     int bottlesIn1Month=43200*8;
-     System.out.println(" за сутки машина произвела "+bottlesIn1Month+" штук бутылок ");
+     byte twoMinutes=2;
+     byte perTwoMinutes=16;
+     byte twentyMinutes=20;
+     int perTwentyMinutes=twentyMinutes/twoMinutes*perTwoMinutes;
+     System.out.println(20/2*16);
+     System.out.println("За 20 минут машина произвела 160 штук бутылок");
+
+     perTwentyMinutes=160;
+     byte day=24;
+     short perHour=(short)(perTwentyMinutes*3);
+     System.out.println(160*3);
+     perHour=480;
+     short perDay=(short) (perHour*24);
+     System.out.println(480*24);
+     System.out.println("За сутки машина произвела 11520 штук бутылок");
+
+     perDay=11520;
+     short days3=(short)(perDay*3);
+     System.out.println(11520*3);
+     System.out.println(" За 3 дня машина произвела 34560 штук бутылок");
+
+     days3=(short)34560;
+     int perMonth=(days3*10);
+     System.out.println(34560*10);
+     System.out.println(" За месяц машина произвела 345600 штук бутылок");
 
 
      System.out.println("Задача 5");
@@ -57,61 +77,117 @@ public class Main {
      byte cans=120;
      byte whitePaint=2;
      byte brownPaint=4;
-     int class1 = whitePaint+brownPaint;
-     System.out.println(" На 1 класс уходит "+class1+ " банок краски ");
-     int numberOfClasses=cans/class1;
-     System.out.println(" Всего в школе "+numberOfClasses+ " классов");
-     int totalWhitePaint=numberOfClasses*whitePaint;
-     int totalBrownPaint=numberOfClasses*brownPaint;
-     System.out.println(" В школе, где "+numberOfClasses+ " классов, нужно "+totalWhitePaint+" банок белой краски и "+totalBrownPaint+ " банок коричневой краски");
-
+     int numberOfClasses=cans/(whitePaint+brownPaint);
+     System.out.println(120/(2+4));
+     System.out.println(" Всего в школе 20 классов");
 
      System.out.println("Задача 6");
 
      byte bananas=5;
      byte gramsIn1Banana=80;
-     int jastGrams=bananas*gramsIn1Banana;
-     int mlMilk=200;
+     short jastGrams=(short)(bananas*gramsIn1Banana);
+     System.out.println(5*80);
+
+     short mlMilk=200;
      byte milkGrams=105;
-     int gram200Ml=milkGrams*2;
+     short gram200Ml=(short)(milkGrams*2);
+     System.out.println(105*2);
+
      byte iceCream=2;
      byte grams1briquette=100;
-     int jastGrams2=iceCream*grams1briquette;
+     short jastGrams2=(short)(iceCream*grams1briquette);
+     System.out.println(2*100);
+
      byte eggs=4;
      byte gramsIn1Eggs=70;
-     int jastGrams3=eggs*gramsIn1Eggs;
-     int totalInTheBlender=jastGrams+jastGrams2+jastGrams3+gram200Ml;
-     System.out.println(" Всего грамм в блендере "+totalInTheBlender);
-     float totalKg=totalInTheBlender/1000f;
-     System.out.println(" Всего в блендере вес "+totalKg+ " кг ");
+     short jastGrams3=(short)(eggs*gramsIn1Eggs);
+     System.out.println(4*70);
+
+     short totalInTheBlender=(short)(jastGrams+jastGrams2+jastGrams3+gram200Ml);
+     System.out.println(400+210+200+280);
+
+     totalInTheBlender=1090;
+     short oneKg=1000;
+     float breakfast=totalInTheBlender/oneKg;
+     System.out.println(" Всего спортивного завтрака 1.09 кг");
 
 
      System.out.println("Задача 7");
+
      byte loseWeight=7;
-     int gramsPerDay=250;
-     int loseGrams=loseWeight*1000;
-     int day=loseGrams/gramsPerDay;
-     System.out.println(" Уйдет на похудение "+day+ " дней ");
-     int gramsPerDay2=500;
-     int day2=loseGrams/gramsPerDay2;
-     System.out.println(" Уйдет на похудение "+day2+ " дней ");
+     short gramsPerDay=250;
+     short loseGrams=(short)((loseWeight*1000)/gramsPerDay);
+     System.out.println((7*1000)/250);
+     System.out.println(" Уйдет на похудение 28 дней ");
+
+     short gramsPerDay2=500;
+     short loserGrams2=(short)((loseWeight*1000)/gramsPerDay2);
+     System.out.println((7*1000)/500);
+     System.out.println(" Уйдет на похудение 14 дней ");
 
 
      System.out.println("Задача 8");
 
      int masha=67760;
      byte procents=10;
-     long totalMasha=(masha/100)*10;
-     long inTotal=masha+totalMasha;
-     System.out.println(" Маша теперь получает "+inTotal+" рублей. Годовой доход вырос на " +totalMasha+" рублей ");
+     short totalMasha=(short)(masha/100*procents);
+     System.out.println((67760/100)*10);
+     int beforeIndexation=masha+procents;
+     System.out.println(67760+6770);
+
+     beforeIndexation=74566;
+     byte monthsOfTheYear=12;
+     int afterIndexationMashaInTheYer=masha*monthsOfTheYear;
+     System.out.println(67760*12);
+
+     int beforeIndexationMashaInTheYear=beforeIndexation*monthsOfTheYear;
+     System.out.println(74566*12);
+
+     beforeIndexationMashaInTheYear=894432;
+     afterIndexationMashaInTheYer=813120;
+     int theDifferenceBetweenEarnings=beforeIndexationMashaInTheYear-afterIndexationMashaInTheYer;
+        System.out.println(894432-813120);
+        System.out.println("Маша теперь получает 74566 рублей. Годовой доход вырос на 81312 рублей");
+
+
      int denis=83690;
-     long totalDenis=(denis/100)*10;
-     long inTotal2=denis+totalDenis;
-     System.out.println(" Денис теперь получает "+inTotal2+ " рублей. Годовой доход вырос на "+totalDenis+" рублей ");
+     short totalDenis=(short)(denis/100*procents);
+     System.out.println(83690/100*10);
+     int beforeIndexation1=denis+procents;
+     System.out.println(83690+8369);
+
+     beforeIndexation1=92059;
+     int afterIndexationDenisInTheYear=denis*monthsOfTheYear;
+     System.out.println(83690*12);
+
+     int beforeIndexationDenisInTheYear=beforeIndexation1*monthsOfTheYear;
+     System.out.println(92059*12);
+
+     beforeIndexationDenisInTheYear=1104708;
+     afterIndexationDenisInTheYear=1004280;
+     int theDifferenceBetweenEarnings1=beforeIndexationDenisInTheYear-afterIndexationDenisInTheYear;
+     System.out.println(1104708-1004280);
+     System.out.println("Денис теперь получает 92059 рублей. Годовой доход вырос на 100428 рублей");
+
      int kristina=76230;
-     long totalKristina=(kristina/100)*10;
-     long inTotal3=kristina+totalKristina;
-     System.out.println(" Кристина теперь получает "+inTotal3+" рублей. Годовой доход вырос на "+totalKristina+" рублей ");
+     short totalKristina=(short)(kristina/100*procents);
+        System.out.println(76230/100*10);
+        int beforeIndexation2=kristina+procents;
+        System.out.println(76230+7623);
+
+        beforeIndexation2=83853;
+        int afterIndexationKristinaInTheYear=kristina*monthsOfTheYear;
+        System.out.println(76230*12);
+
+        int beforeIndexationKristinaInTheYear=beforeIndexation2*monthsOfTheYear;
+        System.out.println(83853*12);
+        beforeIndexationKristinaInTheYear=1006236;
+        afterIndexationKristinaInTheYear=914760;
+        int theDifferenceBetweenEarnings2=beforeIndexationKristinaInTheYear-afterIndexationKristinaInTheYear;
+        System.out.println(1006236-914760);
+        System.out.println(" Кристина теперь получает 83853 рублей. Годовой доход вырос на 91476 рублей");
+
+
 
 
 
